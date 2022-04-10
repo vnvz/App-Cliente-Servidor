@@ -29,7 +29,7 @@ def handle_client(conn, addr):
     conn.close()
 
 def start():
-    server.listen(5) #Escuta até 5 conexões simultâneas
+    server.listen() #Começa a escutar por conexões
     print(f"[*] Escutando {ip}, {port}")
     while True:
         conn, addr = server.accept()
