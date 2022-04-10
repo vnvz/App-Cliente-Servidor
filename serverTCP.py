@@ -10,6 +10,7 @@ ip = input("INSIRA UM ENDEREÇO DE IP OU 'localhost'\n")
 port = 80
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #AF_INET define IPV4 e SOCK_STREAM define o protocolo como TCP
 server.bind((ip, port))
+print ("-------------------------")
 
 def handle_client(conn, addr):
     print(f"[*] NOVA CONEXÃO: {addr} conectado...")

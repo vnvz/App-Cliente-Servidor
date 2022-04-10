@@ -11,7 +11,7 @@ def send(msg):
     message = msg.encode(FORMAT)
     msg_length = len(message)
     send_length = str(msg_length).encode(FORMAT) #Envia primeiramente o tamanho da mensagem, respeitando o protocolo do servidor.
-    send_length += b' ' * (HEADER - len(send_length))
+    send_length += b' ' * (HEADER - len(send_length)) #Adiciona bytes vazios para completar a mensagem, de acordo com o protocolo.
     client.send(send_length)
     client.send(message)
     print(client.recv(2048).decode(FORMAT))
