@@ -8,12 +8,10 @@ Aplicação implementada em Python utilizando-se de sockets. Esse aplicativo é 
 - Utiliza-se do protocolo TCP.
 - Permite verificação de transporte confiável (W.I.P.)
 - Falhas de integridade podem ser simuladas. (W.I.P.)
-- Aceita mensagens individuais ou em grupo. (W.I.P.)
-
+- Aceita mensagens individuais ou em grupo.
 Essa aplicação foi implementada no Windows através do Subsistema Linux (WSL2).
 
 ## Como executar o programa.
-
 Primeiramente você deve rodar o arquivo `serverTCP.py` em uma instância de terminal. Ex:
 ```
 sudo python serverTCP.py
