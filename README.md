@@ -23,6 +23,6 @@ Logo em seguida você deve rodar em outra instância do terminal o arquivo `clie
 ```
 sudo python clientTCP.py
 ```
-Seguindo esse processo, basta seguir as instruções dentro do programa e ver ele em funcionamento.
+Seguindo esse processo, basta seguir as instruções dentro do programa e ver ele em funcionamento. Para desconectar o cliente do servidor, apenas envie a mensagem `!disconnect`.
 (placeholder para explicar processo de simulação de erros)
 
