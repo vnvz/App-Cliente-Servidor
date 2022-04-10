@@ -14,7 +14,7 @@ Essa aplicação foi implementada no Windows através do Subsistema Linux (WSL2)
 
 ## Como executar o programa.
 
-Primeiramente você deve rodar o arquivo `serverTCP.py` em uma instancia de terminal. Ex:
+Primeiramente você deve rodar o arquivo `serverTCP.py` em uma instância de terminal. Ex:
 ```
 sudo python serverTCP.py
 ```

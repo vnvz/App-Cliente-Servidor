@@ -2,7 +2,7 @@ import socket, threading
 #from funcs.py import *
 
 print("## SETUP DO SERVIDOR ##")
-ip = input(print("INSIRA UM ENDEREÇO DE IP OU 'localhost'"))
+ip = input("INSIRA UM ENDEREÇO DE IP OU 'localhost'\n")
 port = 80
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #AF_INET define IPV4 e SOCK_STREAM define o protocolo como TCP
