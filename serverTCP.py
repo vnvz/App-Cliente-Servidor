@@ -1,5 +1,4 @@
 import socket, threading
-#from funcs.py import *
 
 HEADER = 64 #Constante para número de bytes por mensagem
 FORMAT = 'utf-8' #Constante para decodificar mensagens
