@@ -7,6 +7,32 @@ DISCONNECT_MESSAGE = '!disconnect' #Constante para desconectar o cliente
 target_port = 80
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #AF_INET define IPV4 e SOCK_STREAM define o protocolo como TCP
 
+def findCheckSum(msg, packets):
+    def findCheckSum(msg, packets):
+        c1 = msg[0:packets]
+        c2 = msg[packets:2 * packets]
+        c3 = msg[2 * packets:3 * packets]
+        c4 = msg[3 * packets:4 * packets]
+
+        # Soma todos os pacotes usando-se base 2 para obter-se o "checkSum"
+        somaBinaria = bin(int(c1, 2) + int(c2, 2) + int(c3, 2) + int(c4, 2))[2:]
+
+        # Responsavel por fazer o loop dos numeros que derem overflow checksum, caso haja
+        if len(somaBinaria) > packets:
+            x = len(somaBinaria) - packets
+            somaBinaria = bin(int(somaBinaria[0:x], 2) + int(somaBinaria[x:], 2))[2:]
+        if len(somaBinaria) < packets:
+            somaBinaria = '0' * (packets - len(somaBinaria)) + somaBinaria
+
+        checkSum = ''
+        for i in somaBinaria:
+            if i == '1':
+                checkSum += '0'
+            else:
+                checkSum += '1'
+        return checkSum
+
+
 def send(msg):
     message = msg.encode(FORMAT)
     msg_length = len(message)
