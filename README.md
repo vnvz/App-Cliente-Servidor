@@ -9,7 +9,8 @@ Aplicação implementada em Python utilizando-se de sockets. Esse aplicativo é 
 - Permite verificação de transporte confiável (W.I.P.)
 - Falhas de integridade podem ser simuladas. (W.I.P.)
 - Aceita mensagens individuais ou em grupo.
-
+- Verificação de integridade de mensagem a partir de função checkSum() (função desenvolvida porém não conseguiu-se a implementação)
+- 
 Essa aplicação foi implementada no Windows através do Subsistema Linux (WSL2).
 
 ## Como executar o programa.
